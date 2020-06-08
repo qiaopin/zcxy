@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们</title>
+    <link rel="icon" href="../image/首页/u94.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/lxwm.css">
+    <style type="text/css">
+		body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+		#allmap{height:500px;width:100%;}
+		#r-result{width:100%; font-size:14px;}
+	</style>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=AQWrMs4e0XoFfX1Hmtvrg1HRvFuRjvY0"></script>
+</head>
+<body>
+   <div class="container">
+    <p>致我们的新老朋友：</p>
+    <p class="text-indent">
+        中测新宇（北京）信息科技有限公司（曾用名：中测新宇（北京）测绘技术有限公司）自成立以来在新老朋友的关爱和帮助下，一天天的茁壮成长。再次向尊敬的您对我们的理解、信任、支持和帮助表示深深的感谢!期待您一如既往的支持我们，对我们提出宝贵的意见，我们将一如既往，全力以赴!
+    </p>
+    <br/>
+    <h3>联系方式</h3>
+    <p>
+        中测新宇（北京）信息科技有限公司<br/>
+        地址：北京市海淀区西杏石口路30号A座203<br/>
+        邮编：100143<br/>
+        电话：010- 53712926 /13910124133<br/>
+        邮箱：zhongcexinyu@126.com
+    </p>
+    <div id="allmap"></div>
+   </div>
+
+   <script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(116.24578497651046, 39.94544507048818);
+	map.centerAndZoom(point, 15);
+	
+	var marker = new BMap.Marker(new BMap.Point(116.24578497651046, 39.94544507048818)); // 创建点
+	
+		map.addOverlay(marker);            //增加点   
+</script>
+</body>
+</html>

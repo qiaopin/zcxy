@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.text-indent {
+  text-indent: 2rem;
+}
+.container {
+  margin: 0 8rem;
+}
+.container p {
+  line-height: 2rem;
+}
