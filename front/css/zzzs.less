@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  a{
+      text-decoration: none;
+  }
+  .text-indent{
+    text-indent:.625rem;
+  }
+  
+  body{
+    min-width: 700px;
+    .lxfs-img{
+      background: url(../image/首页/u64.png) no-repeat;
+      background-size: cover;
+      .top{
+        position: relative;
+        z-index: 99;
+        left: 0;
+        top: 0;
+        display:flex;
+        margin: auto 0;
+        width: 100%;
+         height: 1.25rem;
+         .top-left{
+         float: left;
+        width: 9.5rem;
+        height: 100%;
+        display: flex;
+        margin-left: .625rem;
+        justify-content: center;
+        align-items: center;
+          a{
+            display: block;
+            // background-color: red; 
+            .icon{
+              float: left;
+              width: .875rem;
+              height: .875rem;
+              background: url(../image/首页/u94.png) no-repeat;
+              background-size: 80%;
+            }
+            p{
+              line-height: .875rem;
+              float: left;
+              font-size: .5rem;
+              color: #fff;
+              -webkit-text-size-adjust: none;
+            }
+        }
+       
+       }
+       .top-right{
+        float: right;
+        margin-left: 1.5rem;
+        box-sizing: border-box;
+        // background-color: green;
+        ul{
+          float:right;
+        //   padding-top: .625rem;
+          li{
+            float: left;
+            margin-left: .3rem;
+            height:1.25rem;
+            line-height:1.25rem;
+            a{
+                z-index: 30;
+                display: block;
+             height:1.25rem;
+            //  margin-top: .625rem;
+              color:#fff; 
+              font-size: .3rem; 
+              line-height: .3125rem;
+              img{
+                margin-top: .625rem;
+                float: left;
+                margin-right: .1125rem;
+                width: .3125rem;
+                height: .3125rem;
+              }
+              div{
+                margin-top: .625rem;
+                float: left;
+              }
+              &:hover{
+                color: #7da3d8;
+              }
+            }
+            ol{
+                width: 1.3rem;
+                display: none;
+                li{
+                    width: 1.875rem;
+                    height: .625rem;
+                    line-height: .625rem;
+                    margin-left: 0;
+                    text-align: center;
+                    background-color: rgba(#2d4d85, .2);
+                    a{
+                        font-size: .225rem;
+                        display:block;
+                        width: 1.875rem;
+                       height: .625rem;
+                       line-height: .625rem;
+                       color:#333;
+                       font-size: .2375rem;
+                       }
+                       &:hover{
+                           background-color:rgba(#000, .2);
+                       }
+        
+                }
+            }
+          }
+        }
+      }
+    }
+    }
+    .container{
+      margin:.875rem 4.375rem;
+      p{
+          line-height: .625rem;
+          font-size: .3125rem;
+      }
+      #allmap{
+        margin-top: .875rem;
+        height: 6.25rem;
+        width: 100%;
+      }
+    }
+    footer{
+      width: 100%;
+      height:5.2rem;
+     background:url(../image/首页/footer-bgc.jpg) no-repeat;
+     background-color: #202731;
+      background-size: contain;
+      overflow: hidden;
+      position: relative;
+      .footer-border{
+        color: #fff;
+        position: absolute;
+        right: 3rem;
+        top: .5rem;
+        width: 8rem;
+        height: 4rem;
+        background: url(../image/首页/footer-border.png) no-repeat;
+        background-size: 100%;
+        padding: .7rem 1.25rem;
+        div{
+           font-size:.25rem;
+           margin-top: .08rem;
+        }
+        div:first-child{
+          font-size: .5rem;
+        }
+      }
+      .copy{
+        width: 100%;
+        height: .5rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-top:.0125rem solid #949494;
+        text-align: center;
+        color: #fff;
+        p{
+          width: 100%;
+          height: .25rem;
+          font-size: .2rem;
+          line-height: .5rem;
+        }
+      }
+    }
+  }
+  

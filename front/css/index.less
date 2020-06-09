@@ -8,6 +8,9 @@
   li {
     list-style: none;
   }
+  .non{
+    display: none;
+  }
   a{
       text-decoration: none;
   }
@@ -16,6 +19,7 @@
     margin: 0;
     padding: 0;
     .top{
+      display: none;
       z-index: 99;
       position: absolute;
       left: 0;
@@ -27,11 +31,11 @@
        background-color: rgba(#fff, .2);
        .top-left{
          float: left;
-        width: 11.25rem;
+        width: 9.5rem;
         height: 100%;
         display: flex;
         margin-left: .625rem;
-        // justify-content: center;
+        justify-content: center;
         align-items: center;
           a{
             display: block;
@@ -55,29 +59,62 @@
        }
        .top-right{
         float: right;
-        margin-right: .3rem;
+        margin-left: 1.5rem;
+        box-sizing: border-box;
         // background-color: green;
         ul{
-          margin-top: .625rem;
+          float:right;
+        //   padding-top: .625rem;
           li{
             float: left;
             margin-left: .3rem;
+            height:1.25rem;
+            line-height:1.25rem;
             a{
+                z-index: 30;
+                display: block;
+             height:1.25rem;
+            //  margin-top: .625rem;
               color:#fff; 
               font-size: .3rem; 
               line-height: .3125rem;
               img{
+                margin-top: .625rem;
                 float: left;
                 margin-right: .1125rem;
                 width: .3125rem;
                 height: .3125rem;
               }
               div{
+                margin-top: .625rem;
                 float: left;
               }
               &:hover{
-                color: rgb(199, 199, 199);
+                color: #7da3d8;
               }
+            }
+            ol{
+                width: 1.3rem;
+                
+                li{
+                    width: 1.875rem;
+                    height: .625rem;
+                    line-height: .625rem;
+                    margin-left: 0;
+                    text-align: center;
+                    background-color: rgba(#fff, .2);
+                    a{
+                        font-size: .225rem;
+                        display:block;
+                        width: 1.875rem;
+                       height: .625rem;
+                       line-height: .625rem;
+                       }
+                       &:hover{
+                           background-color:rgba(#000, .2);
+                       }
+        
+                }
             }
           }
         }

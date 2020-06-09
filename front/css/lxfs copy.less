@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+  }
+
+  li {
+    list-style: none;
+  }
+  a{
+      text-decoration: none;
+  }
+.text-indent{
+    text-indent:2rem;
+  }
+
+body{
+  .top{
+    position: relative;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  display:flex;
+  margin: auto 0;
+  width: 100%;
+   height: 1.25rem;
+  //  background-color: rgba(#fff, .2);
+  background-color: blue;
+   .top-left{
+     float: left;
+    width: 9.5rem;
+    height: 100%;
+    display: flex;
+    margin-left: .625rem;
+    justify-content: center;
+    align-items: center;
+      a{
+        display: block;
+        // background-color: red; 
+        .icon{
+          float: left;
+          width: .875rem;
+          height: .875rem;
+          background: url(../image/首页/u94.jpg) no-repeat;
+          background-size: 80%;
+        }
+        p{
+          line-height: .875rem;
+          float: left;
+          font-size: .5rem;
+          color: #fff;
+          -webkit-text-size-adjust: none;
+        }
+    }
+   
+   }
+   .top-right{
+    float: right;
+    margin-left: 1.5rem;
+    box-sizing: border-box;
+    // background-color: green;
+    ul{
+      float:right;
+    //   padding-top: .625rem;
+      li{
+        float: left;
+        margin-left: .3rem;
+        height:1.25rem;
+        line-height:1.25rem;
+        a{
+            z-index: 30;
+            display: block;
+         height:1.25rem;
+        //  margin-top: .625rem;
+          color:#fff; 
+          font-size: .3rem; 
+          line-height: .3125rem;
+          img{
+            margin-top: .625rem;
+            float: left;
+            margin-right: .1125rem;
+            width: .3125rem;
+            height: .3125rem;
+          }
+          div{
+            margin-top: .625rem;
+            float: left;
+          }
+          &:hover{
+            color: #7da3d8;
+          }
+        }
+        ol{
+            width: 1.3rem;
+            
+            li{
+                width: 1.875rem;
+                height: .625rem;
+                line-height: .625rem;
+                margin-left: 0;
+                text-align: center;
+                background-color: rgba(#fff, .2);
+                a{
+                    font-size: .225rem;
+                    display:block;
+                    width: 1.875rem;
+                   height: .625rem;
+                   line-height: .625rem;
+                   }
+                   &:hover{
+                       background-color:rgba(#000, .2);
+                   }
+    
+            }
+        }
+      }
+    }
+  }
+}
+
+  .container{
+    margin:0 4.375rem;
+    p{
+        line-height: 2.2rem;
+    }
+  }
+}
