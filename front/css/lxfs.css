@@ -116,7 +116,14 @@ body .lxfs-img .top .top-right ul li ol li:hover {
 body .container {
   margin: 0.875rem 4.375rem;
 }
-body .container img {
+body .container div {
+  font-size: 0.5625rem;
+  font-weight: 700;
+}
+body .container div span {
+  line-height: 0.5705rem;
+}
+body .container div img {
   width: 0.625rem;
   vertical-align: middle;
   margin: 0.25rem;
