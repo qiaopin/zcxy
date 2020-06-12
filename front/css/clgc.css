@@ -14,7 +14,7 @@ a {
   text-indent: 0.625rem;
 }
 body {
-  min-width: 700px;
+  min-width: 1024px !important;
 }
 body .lxfs-img {
   background: url(../image/first-page/u63.png) no-repeat;
@@ -119,14 +119,29 @@ body .lxfs-img .top .top-right ul li ol li:hover {
 body .container {
   margin: 0.875rem 4.375rem;
 }
-body .container p {
-  line-height: 0.625rem;
-  font-size: 0.3125rem;
+body .container .title {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  line-height: 0.5705rem;
 }
-body .container #allmap {
-  margin-top: 0.875rem;
-  height: 6.25rem;
-  width: 100%;
+body .container .celaing {
+  float: left;
+  overflow: hidden;
+  margin: 0.375rem 0.1rem;
+  background-color: rgba(173, 223, 248, 0.3);
+  text-align: center;
+}
+body .container .celaing img {
+  width: 3.5rem;
+  height: 2.8rem;
+  display: block;
+}
+body .container .celaing p {
+  width: 3.5rem;
+  height: 1rem;
+  font-size: 0.2rem;
+  line-height: 1rem;
+  text-align: center;
 }
 body footer {
   width: 100%;
@@ -170,4 +185,14 @@ body footer .copy p {
   height: 0.25rem;
   font-size: 0.2rem;
   line-height: 0.5rem;
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920) {
+  html {
+    font-size: 80px !important;
+  }
 }

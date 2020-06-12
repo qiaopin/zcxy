@@ -14,7 +14,7 @@ a {
   text-indent: 0.625rem;
 }
 body {
-  min-width: 700px;
+  min-width: 1024px !important;
 }
 body .lxfs-img {
   background: url(../image/contact-us/202.jpg) no-repeat;
@@ -125,8 +125,8 @@ body .container img {
   margin: 0.25rem;
 }
 body .container span {
-  font-size: 0.225rem;
-  font-weight: 400;
+  font-size: 0.5625rem;
+  font-weight: 700;
 }
 body .container p {
   line-height: 0.625rem;
@@ -208,4 +208,14 @@ body footer .copy p {
   height: 0.25rem;
   font-size: 0.2rem;
   line-height: 0.5rem;
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920) {
+  html {
+    font-size: 80px !important;
+  }
 }

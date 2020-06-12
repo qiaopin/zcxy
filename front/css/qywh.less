@@ -16,7 +16,7 @@
   }
   
   body{
-    min-width: 700px;
+    min-width: 1024px;
     .lxfs-img{
       background: url(../image/first-page/u64.png) no-repeat;
       background-size: cover;
@@ -125,14 +125,38 @@
     }
     .container{
       margin:.875rem 4.375rem;
-      p{
-          line-height: .625rem;
-          font-size: .3125rem;
+      .title{
+        font-size: .5625rem;
+        font-weight: 700;
+        line-height: .5705rem;
       }
-      #allmap{
-        margin-top: .875rem;
-        height: 6.25rem;
-        width: 100%;
+      .linian-img{
+        margin-top: .375rem;
+        position: relative;
+        img{
+          width: 100%;
+        }
+        p{
+          font-size: 0.3125rem;
+          margin-left: .5rem;
+          letter-spacing: .0625rem;
+          line-height: .625rem;
+        }
+        .title{
+          font-size: .4rem;
+          line-height: .875rem;
+          color:#169bd5;
+          margin-left: .0625rem;
+        }
+        .tuanj{
+          width: 50%;
+        }
+        .des{
+          font-size: .25rem;
+          padding-top: .625rem;
+          margin: 0;
+          text-indent: .5rem;
+        }
       }
     }
     footer{
@@ -180,3 +204,15 @@
     }
   }
   
+
+  @media screen and (max-width: 1024px) {
+    html {
+      font-size: 42px !important;
+    }
+  }
+  @media screen and (min-width: 1920) {
+    html {
+      font-size: 80px !important;
+    }
+  }
+

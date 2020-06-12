@@ -14,6 +14,7 @@ a {
   text-decoration: none;
 }
 body {
+  min-width: 1024px !important;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -138,7 +139,7 @@ body section .enter .enter-bot {
   left: 42%;
 }
 body section .text p {
-  font-size: 0.25rem;
+  font-size: 0.3rem;
   text-align: center;
   margin-top: 0.625rem;
 }
@@ -147,6 +148,9 @@ body section .text p:first-child {
   font-size: 0.5rem;
   color: #666;
   letter-spacing: 0.125rem;
+}
+body section .text .qyjs {
+  line-height: 0.625rem;
 }
 body section .more {
   margin: 1.25rem 0;
@@ -271,6 +275,24 @@ body section .business .content .content-right {
 body section .business .content .content-right .dx .top-content {
   font-size: 0.375rem;
 }
+body section .business .content .content-right .dx .top-content .guanxian {
+  float: left;
+  margin-right: 0.25rem;
+  width: 3.375rem;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  text-align: center;
+  background-color: rgba(109, 100, 196, 0.2);
+}
+body section .business .content .content-right .dx .top-content .guanxian img {
+  width: 2.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+body section .business .content .content-right .dx .top-content .guanxian span {
+  display: block;
+  font-size: 0.2rem !important;
+  line-height: 0.375rem;
+}
 body section .business .content .content-right .dx a {
   display: block;
   background-color: #169bd5;
@@ -287,9 +309,9 @@ body section .business .content .content-right .dx a:hover {
   color: rgba(0, 0, 0, 0.2);
 }
 body section .business .content .content-right .dx p {
+  margin: 0.25rem;
   font-size: 0.25rem;
   text-align: left;
-  margin: 0.4rem;
   text-indent: 0.8rem;
   letter-spacing: 0.07rem;
   font-weight: initial;
@@ -300,6 +322,30 @@ body section .business .content .content-right .jz {
 }
 body section .business .content .content-right .jz .top-content {
   font-size: 0.375rem;
+}
+body section .business .content .content-right .jz .top-content .gongcheng {
+  float: left;
+  margin-right: 0.25rem;
+  width: 3.375rem;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  text-align: center;
+  background-color: rgba(109, 100, 196, 0.2);
+}
+body section .business .content .content-right .jz .top-content .gongcheng img {
+  width: 2.5rem;
+  height: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+body section .business .content .content-right .jz .top-content .gongcheng span {
+  display: block;
+  font-size: 0.175rem !important;
+  line-height: 0.375rem;
+}
+body section .business .content .content-right .jz .top-content .gc-more {
+  width: 1.5rem;
+  float: left;
+  margin-top: 1.125rem;
 }
 body section .business .content .content-right .jz a {
   display: block;
@@ -317,9 +363,9 @@ body section .business .content .content-right .jz a:hover {
   color: rgba(0, 0, 0, 0.2);
 }
 body section .business .content .content-right .jz p {
+  margin: 0.25rem;
   font-size: 0.25rem;
   text-align: left;
-  margin: 0.4rem;
   text-indent: 0.8rem;
   letter-spacing: 0.07rem;
   font-weight: initial;
@@ -330,6 +376,25 @@ body section .business .content .content-right .rj {
 }
 body section .business .content .content-right .rj .top-content {
   font-size: 0.375rem;
+}
+body section .business .content .content-right .rj .top-content .xitong {
+  float: left;
+  margin-right: 0.25rem;
+  width: 3.375rem;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  text-align: center;
+  background-color: rgba(109, 100, 196, 0.2);
+}
+body section .business .content .content-right .rj .top-content .xitong img {
+  width: 2.5rem;
+  height: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+body section .business .content .content-right .rj .top-content .xitong span {
+  display: block;
+  font-size: 0.175rem !important;
+  line-height: 0.375rem;
 }
 body section .business .content .content-right .rj a {
   display: block;
@@ -347,9 +412,9 @@ body section .business .content .content-right .rj a:hover {
   color: rgba(0, 0, 0, 0.2);
 }
 body section .business .content .content-right .rj p {
+  margin: 0.25rem;
   font-size: 0.25rem;
   text-align: left;
-  margin: 0.4rem;
   text-indent: 0.8rem;
   letter-spacing: 0.07rem;
   font-weight: initial;
@@ -401,4 +466,14 @@ body footer .copy p {
   height: 0.25rem;
   font-size: 0.2rem;
   line-height: 0.5rem;
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920) {
+  html {
+    font-size: 80px !important;
+  }
 }

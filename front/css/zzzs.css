@@ -14,7 +14,7 @@ a {
   text-indent: 0.625rem;
 }
 body {
-  min-width: 700px;
+  min-width: 1024px;
 }
 body .lxfs-img {
   background: url(../image/first-page/u64.png) no-repeat;
@@ -119,7 +119,12 @@ body .lxfs-img .top .top-right ul li ol li:hover {
 body .container {
   margin: 0.875rem 4.375rem;
 }
-body .container h2 img {
+body .container .title {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  line-height: 0.5705rem;
+}
+body .container .title img {
   width: 0.625rem;
   vertical-align: middle;
   margin: 0.25rem;
@@ -169,4 +174,14 @@ body footer .copy p {
   height: 0.25rem;
   font-size: 0.2rem;
   line-height: 0.5rem;
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920) {
+  html {
+    font-size: 80px !important;
+  }
 }

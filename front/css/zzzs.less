@@ -16,7 +16,7 @@
   }
   
   body{
-    min-width: 700px;
+    min-width: 1024px;
     .lxfs-img{
       background: url(../image/first-page/u64.png) no-repeat;
       background-size: cover;
@@ -125,13 +125,17 @@
     }
     .container{
       margin:.875rem 4.375rem;
-     h2{
-      img{
-        width: .625rem;
-        vertical-align: middle;
-        margin: .25rem;
+      .title{
+        font-size: .5625rem;
+        font-weight: 700;
+        line-height: .5705rem;
+        img{
+          width: .625rem;
+          vertical-align: middle;
+          margin: .25rem;
+        }
       }
-     }
+      
      img.zz{
       width: 100%;
     }
@@ -181,3 +185,16 @@
     }
   }
   
+
+  
+  @media screen and (max-width: 1024px) {
+    html {
+      font-size: 42px !important;
+    }
+  }
+  @media screen and (min-width: 1920) {
+    html {
+      font-size: 80px !important;
+    }
+  }
+

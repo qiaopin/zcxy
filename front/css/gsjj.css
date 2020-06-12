@@ -14,7 +14,7 @@ a {
   text-indent: 0.625rem;
 }
 body {
-  min-width: 700px;
+  min-width: 1024px;
 }
 body .lxfs-img {
   background: url(../image/first-page/u64.png) no-repeat;
@@ -119,14 +119,16 @@ body .lxfs-img .top .top-right ul li ol li:hover {
 body .container {
   margin: 0.875rem 4.375rem;
 }
+body .container div {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  line-height: 0.5705rem;
+}
 body .container p {
   line-height: 0.625rem;
   font-size: 0.3125rem;
-}
-body .container #allmap {
-  margin-top: 0.875rem;
-  height: 6.25rem;
-  width: 100%;
+  text-indent: 0.6rem;
+  margin: 0.25rem 0;
 }
 body footer {
   width: 100%;

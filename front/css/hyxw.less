@@ -16,7 +16,7 @@
   }
   
   body{
-    min-width: 700px;
+    min-width: 1024px !important;
     .lxfs-img{
       background: url(../image/first-page/u61.jpg) no-repeat;
       background-size: cover;
@@ -125,14 +125,10 @@
     }
     .container{
       margin:.875rem 4.375rem;
-      p{
-          line-height: .625rem;
-          font-size: .3125rem;
-      }
-      #allmap{
-        margin-top: .875rem;
-        height: 6.25rem;
-        width: 100%;
+      .hy{
+        font-size: .5625rem;
+        font-weight: 700;
+        line-height: .5705rem;
       }
     }
     footer{
@@ -180,3 +176,14 @@
     }
   }
   
+  @media screen and (max-width: 1024px) {
+    html {
+      font-size: 42px !important;
+    }
+  }
+  @media screen and (min-width: 1920) {
+    html {
+      font-size: 80px !important;
+    }
+  }
+
