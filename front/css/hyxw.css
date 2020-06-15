@@ -117,12 +117,24 @@ body .lxfs-img .top .top-right ul li ol li:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 body .container {
+  min-height: 3.225rem;
   margin: 0.875rem 4.375rem;
 }
 body .container .hy {
   font-size: 0.5625rem;
   font-weight: 700;
   line-height: 0.5705rem;
+}
+body .container ul {
+  margin-top: 0.375rem;
+  font-size: 0.25rem;
+}
+body .container ul li {
+  border-bottom: 0.0125rem dotted #d5df83;
+  line-height: 0.625rem;
+}
+body .container ul li span {
+  float: right;
 }
 body footer {
   width: 100%;

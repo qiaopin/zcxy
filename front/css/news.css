@@ -14,10 +14,10 @@ a {
   text-indent: 0.625rem;
 }
 body {
-  min-width: 700px;
+  min-width: 1024px !important;
 }
 body .lxfs-img {
-  background: url(../image/first-page/u64.png) no-repeat;
+  background: url(../image/first-page/u61.jpg) no-repeat;
   background-size: cover;
 }
 body .lxfs-img .top {
@@ -119,22 +119,12 @@ body .lxfs-img .top .top-right ul li ol li:hover {
 body .container {
   min-height: 3.225rem;
   margin: 0.875rem 4.375rem;
+  font-size: 0.25rem;
 }
-body .container .xinw {
+body .container .hy {
   font-size: 0.5625rem;
   font-weight: 700;
   line-height: 0.5705rem;
-}
-body .container ul {
-  margin-top: 0.375rem;
-  font-size: 0.25rem;
-}
-body .container ul li {
-  border-bottom: 0.0125rem dotted #d5df83;
-  line-height: 0.625rem;
-}
-body .container ul li span {
-  float: right;
 }
 body footer {
   width: 100%;
@@ -178,4 +168,14 @@ body footer .copy p {
   height: 0.25rem;
   font-size: 0.2rem;
   line-height: 0.5rem;
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920) {
+  html {
+    font-size: 80px !important;
+  }
 }
