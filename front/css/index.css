@@ -19,6 +19,21 @@ body {
   margin: 0;
   padding: 0;
 }
+body #return_top {
+  width: 1rem;
+  height: 1rem;
+  color: #fff;
+  font-size: 0.2rem;
+  text-align: center;
+  padding-top: 0.17rem;
+  z-index: 998;
+  position: fixed;
+  right: 0.25rem;
+  bottom: 6rem;
+  background-color: #333;
+  border-radius: 50%;
+  display: none;
+}
 body .top {
   display: none;
   z-index: 99;
