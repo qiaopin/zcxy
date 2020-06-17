@@ -13,10 +13,12 @@ a {
 .text-indent {
   text-indent: 0.625rem;
 }
+body {
+  min-width: 1024px !important;
+}
 body .lxfs-img {
   background: url(../image/contact-us/202.jpg) no-repeat;
   background-size: cover;
-  min-width: 1024px !important;
 }
 body .lxfs-img .top {
   position: relative;
