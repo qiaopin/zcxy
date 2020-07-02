@@ -10,7 +10,8 @@
 
 // nav
 
-window.onload=function(){
+
+
     $(".about").mousemove(function(){
         $(".about ol").show()
     })
@@ -123,7 +124,6 @@ window.onload=function(){
 
 
 
-}
 
 
 
