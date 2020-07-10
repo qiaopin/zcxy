@@ -12,7 +12,7 @@
         src="https://api.map.baidu.com/api?v=2.0&ak=AQWrMs4e0XoFfX1Hmtvrg1HRvFuRjvY0"></script>
     <script src="../js/flexible.js"></script>
     <link rel="stylesheet" href="../css/lxfs.css">
-
+    
 </head>
 
 <body>
@@ -80,9 +80,9 @@
                         </ol>
                     </li>
                     <li>
-                        <a href="">
-                            <img src="../image/page_1/u29.png" alt="电话">
-                            <div>18911785155</div>
+                        <a href="./zxns.html">
+                            <img src="../image/page_1/pin.png" alt="招贤纳士">
+                            <div>招贤纳士</div>
                         </a>
                     </li>
                 </ul>
@@ -99,7 +99,7 @@
             中测新宇（北京）信息科技有限公司（曾用名：中测新宇（北京）测绘技术有限公司）自成立以来在新老朋友的关爱和帮助下，一天天的茁壮成长。再次向尊敬的您对我们的理解、信任、支持和帮助表示深深的感谢!期待您一如既往的支持我们，对我们提出宝贵的意见，我们将一如既往，全力以赴!
         </p>
         <p class="text-indent">恭祝各位身体健康、万事顺心！</p>
-        <br />
+        <!-- <br />
         <br />
         <p>
             中测新宇（北京）信息科技有限公司<br />
@@ -107,7 +107,7 @@
             邮编：100089<br />
             电话：010- 53712926 | 13910124133 | 18911785155<br />
             邮箱：zhongcexinyu@126.com
-        </p>
+        </p> -->
         <div id="allmap"></div>
     </div>
 
@@ -131,32 +131,53 @@
     <script src="../js/index.js"></script>
 
     <script>
+        var sContent =
+        "<div style=''>"+
+	"<h6 style='margin:0 0 5px 0;padding:0.2em 0'>中测新宇（北京）信息科技有限公司</h6>" + 
+	"<img style='float:right;margin-right:4px;width:139px;height:104px;' id='imgDemo' src='../image/first-page/men .jpg' width='139' height='104' title='中测新宇'/>" + 
+	"<p style='width:500px;margin:0;line-height:2.5;font-size:12px;font-weight:400;'>地址：北京市海淀区西杏石口路30号A座203<br/>邮编：100089<br/>电话：010- 53712926 | 13910124133 | 18911785155<br/>邮箱：zhongcexinyu@126.com</p>" + 
+	"</div>";
         // 百度地图API功能
         var map = new BMap.Map("allmap");
-        var point = new BMap.Point(116.331398, 39.897445);
-        map.centerAndZoom(point, 12);
+        var point = new BMap.Point(116.258964,39.952943);
+        var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+        var marker = new BMap.Marker(point);
+
+        map.centerAndZoom(point, 15);
+        map.addOverlay(marker);
         map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        // 添加带有定位的导航控件
-        var navigationControl = new BMap.NavigationControl({
-            // 靠左上角位置
-            anchor: BMAP_ANCHOR_TOP_LEFT,
-            // LARGE类型
-            type: BMAP_NAVIGATION_CONTROL_LARGE,
-            // 启用显示定位
-            enableGeolocation: true
-        });
-        map.addControl(navigationControl);
-        // 创建地址解析器实例
-        var myGeo = new BMap.Geocoder();
-        // 将地址解析结果显示在地图上,并调整地图视野
-        myGeo.getPoint("北京市海淀区西杏石口路30号A座203", function (point) {
-            if (point) {
-                map.centerAndZoom(point, 20);
-                map.addOverlay(new BMap.Marker(point));
-            } else {
-                alert("北京市海淀区西杏石口路30号A座203");
-            }
-        }, "北京市");
+
+        // // 添加带有定位的导航控件
+        // var navigationControl = new BMap.NavigationControl({
+        //     // 靠左上角位置
+        //     anchor: BMAP_ANCHOR_TOP_LEFT,
+        //     // LARGE类型
+        //     type: BMAP_NAVIGATION_CONTROL_LARGE,
+        //     // 启用显示定位
+        //     enableGeolocation: true
+        // });
+        // map.addControl(navigationControl);
+        // // 创建地址解析器实例
+        // var myGeo = new BMap.Geocoder();
+        // // 将地址解析结果显示在地图上,并调整地图视野
+        // myGeo.getPoint("北京市海淀区西杏石口路30号A座203", function (point) {
+        //     if (point) {
+        //         map.centerAndZoom(point, 20);
+        //         map.addOverlay(new BMap.Marker(point));
+        //     } else {
+        //         alert("北京市海淀区西杏石口路30号A座203");
+        //     }
+        // }, "北京市");
+
+        marker.addEventListener("mouseover", function(){          
+           this.openInfoWindow(infoWindow);
+                $('.BMap_pop>img').hide();
+                $('.BMap_pop>div>div>div:first-child').css('border-radius','10px')
+	       //图片加载完毕重绘infowindow
+	       document.getElementById('imgDemo').onload = function (){
+	    	   infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+	       }
+	    });
     </script>
 </body>
 

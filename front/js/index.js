@@ -9,6 +9,29 @@
 // }
 
 // nav
+// iframe的宽高设置
+// var timeIframe;
+// 	window.onload = function() {
+// 		timeIframe = setTimeout(GetIframeStatus, 10);
+// 	}
+// 	function GetIframeStatus() {
+// 		var iframe = document.getElementById("footerIframe");
+// 		var iframeWindow = iframe.contentWindow;
+// 		//内容是否加载完
+// 		if (iframeWindow.document.readyState == "complete") {
+// 			var iframeWidth, iframeHeight;
+// 			//获取Iframe的内容实际宽度
+// 			iframeWidth = iframeWindow.document.documentElement.scrollWidth;
+// 			//获取Iframe的内容实际高度
+// 			iframeHeight = iframeWindow.document.documentElement.scrollHeight;
+// 			//设置Iframe的宽度
+// 			iframe.width = iframeWidth;
+// 			//设置Iframe的高度
+// 			iframe.height = iframeHeight;
+// 		} else {
+// 			timeIframe = setTimeout(GetIframeStatus, 10);
+// 		}
+// 	}
 
 
 
