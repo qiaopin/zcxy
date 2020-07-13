@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" min-width="" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" min-width="1024px" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" ontent="zvxy,中测新宇">
     <title>中测新宇</title>
     <link rel="icon" href="../image/first-page/u94.png" type="image/x-icon" />
     <script src="../js/flexible.js"></script>
-    <link rel="stylesheet" href="../css/qywh.css">
+    <link rel="stylesheet" href="../css/xyzp.css">
 </head>
-
 <body>
     <div class="lxfs-img">
         <div class="top">
@@ -92,26 +90,37 @@
     </div>
 
     <div class="container">
-       <div class="title">企业文化</div>
-        <div class="linian-img">
-            <img src="../image/first-page/chengxin1.jpg" alt="">
-            <p class="title">经营理念：</p>
-            <p>
-                使命 | 提高品质，提高标准，提高效率&nbsp;&nbsp; &nbsp;   
-                责任 | 海纳百川，厚积薄发，永不言弃<br/>
-                合作 | 开诚公布，相互信任，顾全大局&nbsp;&nbsp; &nbsp; 
-                管理 | 文化熏陶，制度约束，同心同德<br/>
-            </p>
-            <p class="title">企业精神：</p>
-            <img class="tuanj" src="../image/first-page/tuanjie.png" alt="">
-            <p class="title">经营方针：</p>
-            <p>
-                以质量争信誉、以技术求发展、以管理创效益
-            </p>
-            <p class="des">
-                公司自成立以来，始终秉承“诚实守信、服务一流”的经营理念，发扬“团结、务实、创新、共赢”的企业精神，坚持“以质量争信誉、以技术求发展、以管理创效益”的经营方针，用现代化经营理念、先进的科技手段，竭诚为广大客户提供优质产品和超值服务。 
-            </p>
+        <div class="title">
+            <span>社会招聘</span>
         </div>
+        <div class="search">
+            <input type="text" placeholder="请输入搜索关键字">
+            <select name="search" id="">
+                <option value="">职位类别</option>
+                <option value="">产品研发部</option>
+                <option value="">行政部</option>
+                <option value="">财务部</option>
+                <option value="">测量部</option>
+            </select>
+            <select name="search" id="">
+                <option value="">工作地点</option>
+                <option value="">北京</option>
+            </select>
+            <button>搜索</button>
+        </div>
+        <table>
+            <tr>
+                <th>招聘职位</th>
+                <th>职位类别</th>
+                <th>工作地点</th>
+                <th>职位申请</th>
+            </tr>
+            <tbody id="zhaopin">
+                <tr>
+                    <td colspan="4">暂无招聘信息</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <footer>
@@ -135,6 +144,52 @@
     
     <script src="../js/jquery.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/art-template.js"></script>
+    <script id="tpl" type="text/html">
+        
+            {{if list}}
+                {{each list as value}}
+                <tr>
+                     <td>{{value.zhiwei}}</td>
+                     <td>{{value.leibie}}</td>
+                     <td>{{value.dizhi}}</td>
+                     <td><a href="">{{value.shengqing}}</a></td>
+                    </tr>
+                {{/each}}
+            {{/if}}
+        
+    </script>
+    <script>
+        var data={
+            list:[
+            {
+                zhiwei:'项目经理',
+                leibie:'技术',
+                dizhi:'北京',
+                shengqing:'立即申请'
+            },
+            {
+                zhiwei:'测量人员',
+                leibie:'技术',
+                dizhi:'北京',
+                shengqing:'立即申请'
+            },
+            {
+                zhiwei:'工程测量组长',
+                leibie:'技术',
+                dizhi:'北京',
+                shengqing:'立即申请'
+            },
+            {
+                zhiwei:'测绘工程师',
+                leibie:'技术',
+                dizhi:'北京',
+                shengqing:'立即申请'
+            },
+        ]
+        }
+            var html = template('tpl', data);
+            document.getElementById('zhaopin').innerHTML = html;
+    </script>
 </body>
-
 </html>

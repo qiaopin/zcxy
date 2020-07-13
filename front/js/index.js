@@ -59,6 +59,12 @@
     $(".us").mouseout(function(){
         $(".us ol").hide()
     })
+    $(".zhaona").mousemove(function(){
+        $(".zhaona ol").show()
+    })
+    $(".zhaona").mouseout(function(){
+        $(".zhaona ol").hide()
+    })
     
     
     // 业务领域
