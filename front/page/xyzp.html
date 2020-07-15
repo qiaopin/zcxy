@@ -90,11 +90,38 @@
     </div>
 
     <div class="container">
-        <div>
+        <div class="title">
             <span>校园招聘</span>
         </div>
+        <div class="search">
+            <input type="text" placeholder="请输入搜索关键字">
+            <select name="search" id="">
+                <option value="">职位类别</option>
+                <option value="">产品研发部</option>
+                <option value="">行政部</option>
+                <option value="">财务部</option>
+                <option value="">测量部</option>
+            </select>
+            <select name="search" id="">
+                <option value="">工作地点</option>
+                <option value="">北京</option>
+            </select>
+            <button>搜索</button>
+        </div>
+        <table>
+            <tr>
+                <th>招聘职位</th>
+                <th>职位类别</th>
+                <th>工作地点</th>
+                <th>职位申请</th>
+            </tr>
+            <tbody id="zhaopin">
+                <tr>
+                    <td colspan="4">暂无招聘信息</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
 
     <footer>
         <div class="footer-border">
@@ -117,5 +144,46 @@
     
     <script src="../js/jquery.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/art-template.js"></script>
+    <script id="tpl" type="text/html">
+        
+            {{if list}}
+                {{each list as value i}}
+                <tr>
+                     <td>{{value.zhiwei}}</td>
+                     <td>{{value.leibie}}</td>
+                     <td>{{value.dizhi}}</td>
+                     <td><a class="abtn" index="{{i}}">详情</a></td>
+                </tr>
+                {{/each}}
+            {{/if}}
+        
+    </script>
+    <script>
+        var data={
+            list:[
+            {
+                zhiwei:'应届毕业生',
+                leibie:'实习',
+                dizhi:'北京',
+            },
+        ]
+        }
+        if(data.list){           
+            var html = template('tpl', data);
+            document.getElementById('zhaopin').innerHTML = html;
+        }
+
+        $('.abtn').click(function(e){
+            var e=e||window.event;
+            var target=e.target
+            console.log(target)
+            var zhipin=target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerText ;
+            var zhaopin=zhipin.toString();
+            // window.location.href='./zpxq.html'+'?zp='+zhaopin;
+            sessionStorage.zp=zhaopin
+            window.location.href='./zpxq.html';
+        })
+    </script>
 </body>
 </html>

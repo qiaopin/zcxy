@@ -257,6 +257,7 @@ body section .business p {
   letter-spacing: 0.125rem;
 }
 body section .business .content {
+  height: 8.125rem;
   padding: 0.625rem;
   text-align: center;
   display: flex;

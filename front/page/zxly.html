@@ -110,6 +110,10 @@
                  <label for="content">内容:</label>
                  <textarea name="content" id="" cols="81" rows="15" placeholder="请详细描述您在使用时遇到的问题，以便我们及时处理，500汉字内。"></textarea>
              </div>
+             <div class="fujian">
+                <label for="fujian">附件:</label>
+                <input type="file" name="fujian">
+            </div>
              <button type="button">提交</button>
          </form>
     </div>
@@ -135,6 +139,11 @@
     
     <script src="../js/jquery.js"></script>
     <script src="../js/index.js"></script>
+    <script>
+        $('button').click(function(){
+           alert('后台未开通服务，无法发送请求')
+        })
+    </script>
 </body>
 
 </html>

@@ -122,10 +122,10 @@
     <script src="../js/art-template.js"></script>
     <script id="test" type="text/html">
         <ul>
-         {{each list as value i}}
-          <li class="push">{{value.title}}<span>{{value.time}}</span></li>
-         {{/each}}
-        </ul>
+            {{each list  value i}}
+             <li class="push"><span>{{value.title}}</span><span class="time">{{value.time}}</span></li>
+            {{/each}}
+           </ul>
     </script>
     <script>
         var data = {
@@ -152,8 +152,11 @@
         };
         var html = template('test', data);
         document.getElementById('content').innerHTML = html;
-        $('.push').click(function(){
-            window.location.href='./news.html'
+        $('.push>span').click(function(e){
+            e = e || window.event;
+            e.target = e.target || e.srcElement;
+            var cont=e.target.parentElement.firstElementChild.textContent;
+            location.href='./news.html?cont='+cont;
         })
     </script>
 </body>

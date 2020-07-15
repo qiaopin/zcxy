@@ -132,9 +132,11 @@ body .container ul {
 body .container ul li {
   border-bottom: 0.0125rem dotted #d5df83;
   line-height: 0.625rem;
+  position: relative;
 }
-body .container ul li span {
-  float: right;
+body .container ul li .time {
+  position: absolute;
+  right: 0;
 }
 body footer {
   width: 100%;

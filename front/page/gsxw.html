@@ -95,7 +95,7 @@
     <div class="container">
         <div class="xinw">公司新闻</div>
         <ul id="content">
-            <li>热烈庆祝公司官网建立<span>2020-6-12</span></li>
+            <li><span>热烈庆祝公司官网建立</span><span class="time">2020-6-12</span></li>
         </ul>
     </div>
 
@@ -123,8 +123,8 @@
     <script src="../js/art-template.js"></script>
     <script id="test" type="text/html">
         <ul>
-         {{each list as value i}}
-          <li class="push">{{value.title}}<span>{{value.time}}</span></li>
+         {{each list  value i}}
+          <li class="push"><span>{{value.title}}</span><span class="time">{{value.time}}</span></li>
          {{/each}}
         </ul>
     </script>
@@ -153,9 +153,11 @@
         };
         var html = template('test', data);
         document.getElementById('content').innerHTML = html;
-        $('.push').click(function(){
-            console.log(123);
-            window.location.href='./news.html'
+        $('.push>span').click(function(e){
+            e = e || window.event;
+            e.target = e.target || e.srcElement;
+            var cont=e.target.parentElement.firstElementChild.textContent;
+            location.href='./news.html?cont='+cont;
         })
         </script>
 </body>

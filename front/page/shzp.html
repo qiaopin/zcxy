@@ -148,13 +148,13 @@
     <script id="tpl" type="text/html">
         
             {{if list}}
-                {{each list as value}}
+                {{each list as value i}}
                 <tr>
                      <td>{{value.zhiwei}}</td>
                      <td>{{value.leibie}}</td>
                      <td>{{value.dizhi}}</td>
-                     <td><a href="">{{value.shengqing}}</a></td>
-                    </tr>
+                     <td><a class="abtn" index="{{i}}">详情</a></td>
+                </tr>
                 {{/each}}
             {{/if}}
         
@@ -166,30 +166,40 @@
                 zhiwei:'项目经理',
                 leibie:'技术',
                 dizhi:'北京',
-                shengqing:'立即申请'
             },
             {
                 zhiwei:'测量人员',
                 leibie:'技术',
                 dizhi:'北京',
-                shengqing:'立即申请'
             },
             {
                 zhiwei:'工程测量组长',
                 leibie:'技术',
                 dizhi:'北京',
-                shengqing:'立即申请'
             },
             {
                 zhiwei:'测绘工程师',
                 leibie:'技术',
                 dizhi:'北京',
-                shengqing:'立即申请'
             },
         ]
         }
+        
+        if(data.list){  
             var html = template('tpl', data);
             document.getElementById('zhaopin').innerHTML = html;
+        }
+
+        $('.abtn').click(function(e){
+            var e=e||window.event;
+            var target=e.target
+            console.log(target)
+            var zhipin=target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerText ;
+            var zhaopin=zhipin.toString();
+            // window.location.href='./zpxq.html'+'?zp='+zhaopin;
+            sessionStorage.zp=zhaopin
+            window.location.href='./zpxq.html';
+        })
     </script>
 </body>
 </html>

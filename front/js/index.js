@@ -68,7 +68,7 @@
     
     
     // 业务领域
-    $('.content-left>a:first-child').mouseover(function(){
+    $('.dx').mouseover(function(){
         $('a.dx>div').css('background-color','#6bd2ff')
         $('.content-right>.dx').show()
         $('.content-right>.jz').hide()
@@ -94,7 +94,7 @@
         // $('a.jz>div').css('background-color','rgba(173, 223, 248, 0.8)')
     })
     
-    $('.content-left>a:nth-child(3)').mouseover(function(){
+    $('.rj').mouseover(function(){
         $('a.dx>div').css('background-color','rgba(173, 223, 248, 0.8)')
         $('a.jz>div').css('background-color','rgba(173, 223, 248, 0.8)')
         $('a.rj>div').css('background-color','#6bd2ff')
