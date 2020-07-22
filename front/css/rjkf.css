@@ -141,6 +141,7 @@ body .container .soft p {
   font-size: 0.225rem;
   line-height: 1rem;
   text-align: center;
+  color: #000;
 }
 body footer {
   width: 100%;
