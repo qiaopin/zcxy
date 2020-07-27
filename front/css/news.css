@@ -122,9 +122,13 @@ body .container {
   font-size: 0.25rem;
 }
 body .container .hy {
-  font-size: 0.5625rem;
+  font-size: 0.35rem;
   font-weight: 700;
-  line-height: 0.5705rem;
+  line-height: 0.8rem;
+}
+body .container .new {
+  text-indent: 0.6rem;
+  line-height: 0.5rem;
 }
 body footer {
   width: 100%;

@@ -122,35 +122,23 @@ body .container {
 body .container .title {
   font-size: 0.5625rem;
   font-weight: 700;
-  line-height: 0.5705rem;
+  line-height: 1.25rem;
 }
-body .container .linian-img {
-  margin-top: 0.375rem;
-  position: relative;
+body .container .culture img {
+  width: 8.75rem;
+  margin-bottom: 0.375rem;
 }
-body .container .linian-img img {
-  width: 100%;
+body .container .culture .culture-des {
+  width: 6.125rem;
+  padding: 1.75rem 0 0 1.25rem;
 }
-body .container .linian-img p {
-  font-size: 0.3125rem;
-  margin-left: 0.5rem;
-  letter-spacing: 0.0625rem;
-  line-height: 0.625rem;
-}
-body .container .linian-img .title {
-  font-size: 0.4rem;
-  line-height: 0.875rem;
+body .container .culture .culture-des .title-c {
+  font: normal 700 0.5rem SimSun;
+  line-height: 1rem;
   color: #169bd5;
-  margin-left: 0.0625rem;
 }
-body .container .linian-img .tuanj {
-  width: 50%;
-}
-body .container .linian-img .des {
-  font-size: 0.25rem;
-  padding-top: 0.625rem;
-  margin: 0;
-  text-indent: 0.5rem;
+body .container .culture .culture-des .lh {
+  line-height: 0.35rem;
 }
 body footer {
   width: 100%;
@@ -198,6 +186,9 @@ body footer .copy p {
 }
 body footer .copy p a {
   color: #fff;
+}
+.right {
+  float: right;
 }
 @media screen and (max-width: 1024px) {
   html {

@@ -134,7 +134,10 @@ body .container ul li {
   line-height: 0.625rem;
   position: relative;
 }
-body .container ul li .time {
+body .container ul li a {
+  color: #000;
+}
+body .container ul li a .time {
   position: absolute;
   right: 0;
 }

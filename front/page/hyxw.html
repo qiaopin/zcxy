@@ -123,41 +123,42 @@
     <script id="test" type="text/html">
         <ul>
             {{each list  value i}}
-             <li class="push"><span>{{value.title}}</span><span class="time">{{value.time}}</span></li>
+             <!-- <li class="push"><span>{{value.title}}</span><span class="time">{{value.time}}</span></li> -->
+             <li class="push">
+                 <a href="{{value.a}}">
+                    <span>{{value.title}}</span><span class="time">{{value.time}}</span>
+                 </a>
+             </li>
             {{/each}}
            </ul>
     </script>
     <script>
         var data = {
-            list: [{
-                title: '热烈',
-                time: '2020-6-16'
+            list: [
+            {
+                title: '刚刚！资源三号03星成功发射！',
+                time: '2020-7-25',
+                a:'https://mp.weixin.qq.com/s/EoMfq5DbzQgv5i4NA81Z7A'
+            },{
+                title: '规划要素精准传导，三维立体智能管控，助力国土空间高质量发展',
+                time: '2020-7-24',
+                a:'https://mp.weixin.qq.com/s/B9kUPZhcFDqADLOfcVflZA'
             },
             {
-                title: '庆祝',
-                time: '2020-6-15'
+                title: '2020 GIS 软件技术大会走向分布式，将有这些调整',
+                time: '2020-7-19',
+                a:"https://mp.weixin.qq.com/s/K9GBVNV0PQopdzURKpUm2w"
             },
-            {
-                title: '中测新宇',
-                time: '2020-6-14'
-            },
-            {
-                title: '官网',
-                time: '2020-6-13'
-            },
-            {
-                title: '成立',
-                time: '2020-6-12'
-            }]
+        ]
         };
         var html = template('test', data);
         document.getElementById('content').innerHTML = html;
-        $('.push>span').click(function(e){
-            e = e || window.event;
-            e.target = e.target || e.srcElement;
-            var cont=e.target.parentElement.firstElementChild.textContent;
-            location.href='./news.html?cont='+cont;
-        })
+        // $('.push>span').click(function(e){
+        //     e = e || window.event;
+        //     e.target = e.target || e.srcElement;
+        //     var cont=e.target.parentElement.firstElementChild.textContent;
+        //     location.href='./news.html?cont='+cont;
+        // })
     </script>
 </body>
 
